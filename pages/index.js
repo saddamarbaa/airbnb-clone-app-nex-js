@@ -1,16 +1,41 @@
 /** @format */
 
 import Head from "next/head";
-import Header from "../compontents/header/header";
+import HomePageComponent from "../components/homePage/homePage";
+import { fragment } from "react";
+import Image from "next/image";
 
-export default function Home() {
+const HomePage = (props) => {
+
 	return (
-		<div className=''>
+		<fragment>
 			<Head>
-				<title>Create Next App</title>
-				<link rel='icon' href='/favicon.ico' />
+				<title>Airbnb Clone app</title>
+				<meta
+					name='description'
+					content='Airbnb Clone build with React + Next Js.'
+				/>
 			</Head>
-			<Header />
-		</div>
+
+			<HomePageComponent data={props?.data} cardData={props?.cardData} />
+		</fragment>
 	);
+};
+
+export async function getStaticProps() {
+	const response = await fetch("https://links.papareact.com/pyp");
+	const data = await response.json();
+
+	const cardData = await fetch("https://links.papareact.com/zp1").then(
+		(response) => response.json(),
+	);
+
+	return {
+		props: {
+			data: data,
+			cardData: cardData,
+		},
+	};
 }
+
+export default HomePage;
