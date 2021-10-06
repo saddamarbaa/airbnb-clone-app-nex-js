@@ -2,13 +2,12 @@
 
 import Head from "next/head";
 import HomePageComponent from "../components/homePage/homePage";
-import { fragment } from "react";
-import Image from "next/image";
+import { Fragment } from "react";
+import MainNavigation from "../components/layout/main-navigation";
 
 const HomePage = (props) => {
-
 	return (
-		<fragment>
+		<Fragment>
 			<Head>
 				<title>Airbnb Clone app</title>
 				<meta
@@ -16,9 +15,9 @@ const HomePage = (props) => {
 					content='Airbnb Clone build with React + Next Js.'
 				/>
 			</Head>
-
+			<MainNavigation />
 			<HomePageComponent data={props?.data} cardData={props?.cardData} />
-		</fragment>
+		</Fragment>
 	);
 };
 

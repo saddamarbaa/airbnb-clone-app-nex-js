@@ -1,6 +1,8 @@
 /** @format */
 
 import Image from "next/image";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 import {
 	GlobeIcon,
@@ -8,12 +10,24 @@ import {
 	UserIcon,
 	MenuIcon,
 } from "@heroicons/react/solid";
-const MainNavigation = () => {
+import Calendar from "../calendar/calendar";
+
+const MainNavigation = ({ placeholder }) => {
+	const [searchInput, setSearchInput] = useState("");
+	const router = useRouter();
+
+	const restSearchInput = () => {
+		setSearchInput("");
+	};
+
 	return (
 		<header className='sticky top-0 z-50 bg-white shadow-md py-5 px-5 md:px-10'>
 			<nav className=' grid grid-cols-3   max-w-7xl mx-auto'>
 				<div className=' w-28 relative flex items-center h-10 cursor-pointer my-auto'>
 					<Image
+						onClick={() => {
+							router.push("/");
+						}}
 						src='/images/Airbnb_Logo_Bélo.svg.png'
 						alt='Airbnb logo'
 						layout='fill'
@@ -29,7 +43,9 @@ const MainNavigation = () => {
 						type='text'
 						name=''
 						id=''
-						placeholder='Start your search'
+						placeholder={placeholder ? placeholder : "Start your search"}
+						value={searchInput}
+						onChange={(event) => setSearchInput(event.target.value)}
 					/>
 					<SearchIcon
 						className='h-8 bg-red-400 text-white rounded-full p-2 
@@ -47,6 +63,14 @@ const MainNavigation = () => {
 					</div>
 				</div>
 			</nav>
+
+			{/* Calendar */}
+			{searchInput && (
+				<Calendar
+					restSearchInput={restSearchInput}
+					searchInput={searchInput}
+				/>
+			)}
 		</header>
 	);
 };

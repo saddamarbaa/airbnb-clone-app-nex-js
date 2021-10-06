@@ -6,7 +6,6 @@ import MediumCard from "../cards/medium-card";
 import LargeCard from "../cards/larg-card";
 
 const HomePageComponent = ({ data, cardData }) => {
-	console.log("data ", data);
 	return (
 		<div>
 			<Banner />

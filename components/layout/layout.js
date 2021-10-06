@@ -7,11 +7,11 @@ import MainNavigation from "./main-navigation";
 
 function Layout(props) {
 	return (
-		<Fragment>
-			<MainNavigation />
+		<fragment>
+			{/* <MainNavigation /> */}
 			<main>{props.children}</main>
 			<Footer />
-		</Fragment>
+		</fragment>
 	);
 }
 
