@@ -53,7 +53,7 @@ const CalendarComponent = ({ restSearchInput, searchInput }) => {
 				<UserIcon className='h-5' />
 				<input
 					type='number'
-					Min={1}
+					min={1}
 					value={numberOfGuest}
 					onChange={(event) => setNumberOfGuest(event.target.value)}
 					placeholder='1'

@@ -16,6 +16,7 @@ const HomePage = (props) => {
 				/>
 			</Head>
 			<MainNavigation />
+
 			<HomePageComponent data={props?.data} cardData={props?.cardData} />
 		</Fragment>
 	);

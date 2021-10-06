@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const Banner = () => {
 	return (
-		<div className='relative  h-[350px]'>
+		<div className='relative  min-h-[350px] h-[70vh]'>
 			<div className='absolute  z-20 top-1/2 text-center w-full  '>
-				<p className='text-lg'>Not sure where to go</p>
+				<p className='text-lg font-bold'>Not sure where to go? Perfect.</p>
 				<button className='text-purple-500 bg-white shadow-md px-10 py-5 rounded-full  font-bold my-4  hover:shadow-xl  active:scale-90 transition duration-150'>
 					I,m flexible
 				</button>

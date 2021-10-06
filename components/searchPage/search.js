@@ -1,6 +1,7 @@
 /** @format */
 import { format } from "date-fns";
 import InfoCard from "../cards/info-card";
+import Map from "../map/map";
 
 const SearchComponent = ({
 	location,
@@ -15,9 +16,9 @@ const SearchComponent = ({
 	)}`;
 
 	return (
-		<min className=' py-5 px-5 md:px-10'>
-			<div className='max-w-7xl mx-auto'>
-				<section className='flex-grow pt-14 px-6 font-semibold'>
+		<min className='py-5 px-5 md:px-10'>
+			<div className=' max-w-7xl mx-auto xl:flex overflow-hidden '>
+				<section className='flex-grow pt-14 px-6 font-semibold '>
 					{startDate && (
 						<p className=''>
 							300+ Stays {rangeDate} for numbers of {numberOfGuest}{" "}
@@ -71,7 +72,9 @@ const SearchComponent = ({
 							)}
 					</div>
 				</section>
-				{/* <section>Map</section> */}
+				<section className=''>
+					<Map searchResult={searchResult}/>
+				</section>
 			</div>
 		</min>
 	);
