@@ -3,11 +3,11 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { Calendar } from "react-date-range";
 import { DateRangePicker } from "react-date-range";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { UserIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 
-const CalendarComponent = ({ restSearchInput, searchInput }) => {
+const CalendarComponent = ({ restSearchInput, searchInput, redirect }) => {
 	const [startDate, setStartDate] = useState(new Date());
 	const [endDate, setEndDate] = useState(new Date());
 	const [numberOfGuest, setNumberOfGuest] = useState(1);
@@ -18,6 +18,12 @@ const CalendarComponent = ({ restSearchInput, searchInput }) => {
 		endDate: endDate,
 		key: "selection",
 	};
+
+	useEffect(() => {
+		if (redirect) {
+			handleClick();
+		}
+	}, [redirect]);
 
 	const handleClick = () => {
 		router.push({

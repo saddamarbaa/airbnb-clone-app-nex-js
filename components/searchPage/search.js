@@ -16,9 +16,9 @@ const SearchComponent = ({
 	)}`;
 
 	return (
-		<min className='py-5 px-5 md:px-10'>
+		<min className='py-5 px-5 md:px-10 '>
 			<div className=' max-w-7xl mx-auto xl:flex overflow-hidden '>
-				<section className='flex-grow pt-14 px-6 font-semibold '>
+				<section className='flex-grow pt-[140px] px-6 font-semibold '>
 					{startDate && (
 						<p className=''>
 							300+ Stays {rangeDate} for numbers of {numberOfGuest}{" "}
@@ -73,7 +73,7 @@ const SearchComponent = ({
 					</div>
 				</section>
 				<section className=''>
-					<Map searchResult={searchResult}/>
+					<Map searchResult={searchResult} />
 				</section>
 			</div>
 		</min>

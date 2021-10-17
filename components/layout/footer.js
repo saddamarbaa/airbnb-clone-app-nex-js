@@ -2,7 +2,7 @@
 
 const Footer = () => {
 	return (
-		<footer>
+		<footer className=''>
 			<div className=' w-full px-8 py-10 pt-16  pb-16 sm:px-16  bg-gray-50  border-b-2'>
 				<p className='text-2xl font-bold m-b-4 max-w-7xl mx-auto'>
 					Inspiration for future getaways
@@ -278,10 +278,11 @@ const Footer = () => {
 				</div>
 
 				<div className='py-10   pb-16  max-w-7xl mx-auto  cursor-pointer'>
-				<p className='text-gray-800'>© 2021 Airbnb, Inc Privacy Terms Sitemap</p>
+					<p className='text-gray-800'>
+						© 2021 Airbnb, Inc Privacy Terms Sitemap
+					</p>
 				</div>
 			</div>
-
 		</footer>
 	);
 };

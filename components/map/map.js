@@ -12,7 +12,7 @@ const Map = ({ searchResult }) => {
 	});
 
 	return (
-		<div className='h-[600px] w-full xl:inline-flex xl:max-w-[600px] xl:w-[600px]  xl:h-full '>
+		<div className='h-[100px] w-full xl:inline-flex xl:max-w-[600px] xl:w-[600px]  xl:h-full pt-[70px]'>
 			<ReactMapGL
 				{...viewport}
 				onViewportChange={(nextViewport) => setViewport(nextViewport)}

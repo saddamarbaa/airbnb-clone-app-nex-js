@@ -11,6 +11,11 @@ import ProgressBar from "@badrap/bar-of-progress";
 import React, { useEffect } from "react";
 import Layout from "../components/layout/layout";
 
+import { useAuthState } from "react-firebase-hooks/auth";
+import db, { auth } from "../config/firebase";
+
+import LogInScreen from "./login";
+
 const progress = new ProgressBar({
 	// The size (height) of the progress bar.
 	// Numeric values get converted to px.
@@ -33,6 +38,12 @@ Router.events.on("routeChangeComplete", progress.finish);
 Router.events.on("routeChangeError", progress.finish);
 
 function MyApp({ Component, pageProps }) {
+	const [user, loading] = useAuthState(auth);
+
+	if (!user) {
+		return <LogInScreen />;
+	}
+
 	return (
 		<Layout>
 			<Provider store={store}>
