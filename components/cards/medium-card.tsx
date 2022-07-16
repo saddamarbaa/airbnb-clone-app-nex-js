@@ -17,7 +17,7 @@ const MediumCard = ({ img, description, title }: CardT) => {
 					objectFit="cover"
 				/>
 			</div>
-			<div className="mb-[30px] ">
+			<div className="mb-[30px]">
 				<h3 className="text-2xl mt-3">{title}</h3>
 				<p>{description}</p>
 			</div>

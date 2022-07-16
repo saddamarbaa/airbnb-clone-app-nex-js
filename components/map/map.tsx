@@ -11,7 +11,7 @@ const Map = () => {
 	})
 
 	return (
-		<div className="h-[100px] w-full xl:inline-flex xl:max-w-[600px] xl:w-[600px]  xl:h-full pt-[70px]">
+		<div className="h-[100px] w-full xl:inline-flex xl:max-w-[600px] xl:w-[600px]  xl:h-full pt-[70px] min-h-[600px]">
 			<ReactMapGL
 				{...viewport}
 				// @ts-ignore
