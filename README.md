@@ -1,8 +1,7 @@
 # Airbnb Clone
 
-Building Airbnb Clone App with React Js, Next Js, Redux, Tailwind CSS,
-Heroicons, Firebase, Vercel Hosting,
-with complete user authentication (a mobile-friendly).
+Building Airbnb Clone App with React Js, Next Js, TypeScript, Redux, Tailwind CSS,
+Heroicons, Firebase, Vercel Hosting, with complete user authentication (a mobile-friendly).
 
 # Table of contents
 
@@ -30,6 +29,7 @@ with complete user authentication (a mobile-friendly).
 
 -  React Js
 -  Next Js
+-  TypeScript
 -  Redux
 -  Tailwind CSS
 -  Heroicons
@@ -126,8 +126,8 @@ yarn dev
 -  STORAGE_BUCKET
 -  MESSAIN_SENDER_ID
 -  APPID
+-  MAP_BOX_ACCESS_TOKEN (map box token key)
  
-
 
 # Status
 
@@ -141,7 +141,8 @@ Build By Saddam Arbaa Project inspired by [Airbnb] https://www.airbnb.com/
 # Screenshots
 
  ## Home Page
-![image](https://user-images.githubusercontent.com/51326421/137613609-c27512fd-3f8a-40ef-a93b-40bfedddf0d4.png)
+![image](https://user-images.githubusercontent.com/51326421/179346527-b17b023e-6302-49de-834c-8861b8cf2bef.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/51326421/137613585-ec9ebb46-271c-4078-8132-e872634724b9.png)
@@ -149,7 +150,7 @@ Build By Saddam Arbaa Project inspired by [Airbnb] https://www.airbnb.com/
 
 
 ## Search Page
-![image](https://user-images.githubusercontent.com/51326421/137613720-10fa6984-f158-4996-9dd4-fa5f4c330ab2.png)
+![image](https://user-images.githubusercontent.com/51326421/179347266-72ed3d3f-b32a-4f48-97e4-2e88ae3585fa.png)
 
   
   
@@ -160,32 +161,25 @@ Build By Saddam Arbaa Project inspired by [Airbnb] https://www.airbnb.com/
 
 
 
-# Next.js + Tailwind CSS Example
+## Loading Screen
+![image](https://user-images.githubusercontent.com/51326421/179347020-20f159fd-2262-4bd5-9a5b-7bf720f53a27.png)
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
 
-## Preview
+# Responsiveness
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+![image](https://user-images.githubusercontent.com/51326421/179346742-d329897a-4de5-42d1-a859-0fe65682d0ce.png)
 
-## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+![image](https://user-images.githubusercontent.com/51326421/179346817-5975094c-66a7-4d18-83d5-4b01526037c0.png)
 
-## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+![image](https://user-images.githubusercontent.com/51326421/179346977-4ccf3620-41c7-4c33-b371-f2905b802a6e.png)
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+
+
+
